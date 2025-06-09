@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anukriti</title> 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+ <link rel="stylesheet" href="contact.css">
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "8zyGzzVV8yWtsPwJx",
+      });
+   })();
+</script>
+  <script type="module" src="contact.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Anukriti <br> Choudhary</h1>
+  </header>
+  <div id="loading-screen">
+    <div id="spinner"></div>
+    <p id="loading-text">Loading... 0%</p>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h1> Get In Touch</h1>
+    <div class="contact-container">
+      <form id="contact-form">
+          <div class="row">
+              <div class="input-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="jane" required disabled>
+              </div>
+              <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="jane@gmail.com" required disabled>
+              </div>
+          </div>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your thoughts here..." required disabled></textarea>
+          <button type="submit" id="send-btn" disabled>Send</button>
+      </form>
+      <div id="links">
+          <a href="https://github.com/anukritich" target="_blank" style="margin: 0 10px;">
+              <img src="github.png" alt="GitHub" width="30" />
+          </a>
+          <a href="https://linkedin.com/in/anukriti-choudhary" target="_blank" style="margin: 0 10px;">
+              <img src="linkedin.png" alt="LinkedIn" width="30" />
+          </a>
+      </div>
+  </div>
+
+  </div>
+
+</body>
+</html>
