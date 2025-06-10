@@ -3,11 +3,11 @@
 // import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 // import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 // import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass';
-    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
-    import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js';
-    import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js';
-    import { SMAAPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/SMAAPass.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
+import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js';
+import { SMAAPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/SMAAPass.js';
 
 class SceneManager {
     constructor() {
@@ -137,7 +137,7 @@ class SceneManager {
     }
 
     loadInitialDog() {
-        this.loadModel('/assets/models/dogidle.glb', (model, animations) => {
+        this.loadModel('/Models/dogidle.glb', (model, animations) => {
             this.currentModel = model;
             this.scene.add(model);
 
@@ -149,7 +149,7 @@ class SceneManager {
     }
 
     loadJumpingDog() {
-        this.loadModel('/assets/models/dogjump.glb', (model, animations) => {
+        this.loadModel('/Models/dogjump.glb', (model, animations) => {
             this.currentModel = model;
             this.scene.add(model);
 
@@ -247,8 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Preload models
     const loader = new GLTFLoader(loadingManager);
     const models = [
-        '/assets/models/dogidle.glb',
-        '/assets/models/dogjump.glb'
+        '/Models/dogidle.glb',
+        '/Models/dogjump.glb'
     ];
 
     models.forEach(modelPath => {
